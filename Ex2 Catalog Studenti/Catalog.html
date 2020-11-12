@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Catalog</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+</head>
+
+<body class="w3-container w3-pale-green w3-center">
+    <img class="w3-hover-grayscale w3-opacity-min  w3-card-4 w3-hover-shadow" src="catalog.png" alt="catalog">
+    <h1 class="w3-brown w3-round w3-card w3-padding">Catalog Studenti</h1>
+    <h2 class="w3-blue-grey w3-round w3-card w3-padding">Grupa 2115</h2>
+    <p class="w3-amber w3-round w3-card w3-padding">
+        <a class="w3-hover-shadow w3-card w3-hover-opacity w3-hover-white"
+            href="fisiereHTML/Descriere Bindea Cristian.html">Bindea Cristian</a> <br>
+        <a class="w3-hover-shadow w3-card w3-hover-opacity w3-hover-white"
+            href="fisiereHTML/Manolache Bogdan.html">Manolache Bogdan-Gabriel</a> <br>
+        <a class="w3-hover-shadow w3-card w3-hover-opacity w3-hover-white"
+            href="fisiereHTML/Goia Iulian Teodor.html">Goia Iulian Teodor</a><br>
+        <a class="w3-hover-shadow w3-card w3-hover-opacity w3-hover-white" href="fisiereHTML/Bontya Thomas.html">Bontya
+            Thomas</a><br>
+    </p>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="/imagini/Poza Bindea Cristian.jpeg" style="height: 400px;">
+          <div class="text"><a href="fisiereHTML/Descriere Bindea Cristian.html">Bindea Cristian</a></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagini/Manolache Bogdan.jpg" style="height: 400px;">
+          <div class="text"><a href="fisiereHTML/Manolache Bogdan.html">Manolache Bogdan-Gabriel</a></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagini/Goia Iulian Teodor.jpg" style="height: 400px;">
+          <div class="text"><a href="fisiereHTML/Goia Iulian Teodor.html">Goia Iulian Teodor</a></div>
+        </div>
+        <div class="mySlides fade">
+            <img src="imagini/Bontya Thomas.jpg" style="height: 400px;">
+            <div class="text"><a href="fisiereHTML/Bontya Thomas.html">Bontya Thomas</a></div>
+          </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000);
+            }
+            </script>
+
+</body>
+
+</html>

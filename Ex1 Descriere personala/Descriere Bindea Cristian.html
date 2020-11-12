@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Descriere Personala</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        function myFunction() {
+            document.body.style.backgroundColor = "#62fa88";
+            document.body.style.fontFamily ="TimesNewRoman";
+            document.body.style.fontSize ="23px";
+            document.body.style.color = "#000070";
+            document.getElementById('tabelMaterii').style.backgroundColor="white";
+            document.getElementById('nume').innerHTML = "Inginer Bindea Cristian";
+            document.getElementById('email').innerHTML = "Email: bindea_cristian15_engineer@outlook.com";
+            document.getElementById('citat').innerHTML = "Am invatat, dar tot ma astept sa invat multe lucruri noi.";
+            document.getElementById('imagineProfil').src = "Poza Bindea Cristian_2.jpeg";
+            document.getElementById('titluTabel').innerHTML = "Cateva discipline memorabile din facultate";
+
+            document.getElementById('titluLista').innerHTML = "Experiențe ideal de obținut in perioada facultății";
+            document.getElementById('lista0').innerHTML = "Experienta de munca";
+            document.getElementById('lista1').innerHTML = "Calatorii in scop educational";
+
+            var tabel = document.getElementById('tabelMaterii');
+
+            tabel.rows[1].cells[0].innerHTML = "Microcontrolere";
+            tabel.rows[1].cells[1].innerHTML = "An III";
+            document.getElementById('link2').href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/41.pdf";
+            
+            tabel.rows[2].cells[0].innerHTML = "Tehnologii web";
+            tabel.rows[2].cells[1].innerHTML = "An III";
+            document.getElementById('link3').href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/35.pdf";
+
+            document.getElementById('imagineProfil').style.opacity="1";
+            document.getElementById('imagineProfil').style.borderWidth = "2px";
+        }
+
+        function varsta() {
+            var anNastere = document.getElementById('anulNasterii').innerHTML;
+            var dataCurenta = new Date;
+            var anCurent=dataCurenta.getFullYear();
+            var varstaCurenta = anCurent - parseInt(anNastere);
+            document.getElementById('anulNasterii').innerHTML = varstaCurenta;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="nume">
+        Bindea Gheorghe Cristian
+    </h1>
+    <img id="imagineProfil" src="Poza Bindea Cristian.jpeg" alt="">
+
+    <p onmouseover = "varsta()" id=anulNasterii>
+        2001
+    </p>
+
+    <p>
+    <h3>Date de contact:</h3>
+    <ul>
+        <li id="email">Email: bindea_cristian15@outlook.com</li>
+    </ul>
+    </p>
+    <div>
+        <p id="citat">
+            Ma astept sa invat multe lucruri noi.
+        </p>
+        <div>
+            <p>
+            <h3 id="titluTabel">Lista de discipline preferate:</h3>
+            </p>
+            <table id="tabelMaterii">
+                <tr>
+                    <th>Programarea calculatoarelor -Limbaje</th>
+                    <td>Anul I</td>
+                    <td>
+                        <li><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/04.pdf">Fisa disciplina</a></li>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Componente și circuite electronice</th>
+                    <td>Anul I</td>
+                    <td>
+                        <li><a id="link2" href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf">Fisa disciplina</a></li>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Informatică aplicată</th>
+                    <td>Anul I</td>
+                    <td>
+                        <li><a id="link3" href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/06.pdf">Fisa disciplina</a></li>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button id="altaViata_btn" onclick="myFunction()">Alta viata</button>
+    <button id="refreshpage" onClick="window.location.reload();">Back to reality</button>
+
+    <div>
+        <p>
+        <h3 id="titluLista">Lista cu hobby-uri:</h3>
+        <ul id="ListaHobby">
+            <li id="lista0">Sportul</li>
+            <li id="lista1">Plimbarile cu masina</li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>

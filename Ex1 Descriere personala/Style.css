@@ -1,0 +1,52 @@
+
+        body{
+            background-color: #e7e3e2;
+            font-family: verdana;
+            font-size: 14px;
+            color:rgb(1, 1, 31);
+          
+        }
+        h1{
+            color:rgb(1, 1, 61);
+        }
+        table{
+            background-color: black;
+            border: 2px solid rgb(29, 29, 29);
+        }
+        table th{
+            background-color: #49BEAA;
+            height: 25px;
+            padding: 15px;
+        }
+        table td{
+            background-color: #456990;
+            height: 25px;
+            padding: 10px;
+        }
+        td:hover,th:hover {
+            background-color: #EEB868;
+        }
+        #ListaHobby{
+            border: 2px solid rgb(29, 29, 29);
+            background-color: #ebd6d2;
+        }
+        img{
+            border-radius: 10%;
+            width: auto;
+            height: 430px;
+            opacity: 0.83;
+            margin-left: 50px;
+        }
+        #altaViata_btn{
+            margin: 20px;
+            width: 100px;
+            height: 40px;
+        }
+        #refreshpage{
+            margin: 20px;
+            width: 100px;
+            height: 40px;
+        }
+        #anulNasterii{
+            width: fit-content;
+        }
